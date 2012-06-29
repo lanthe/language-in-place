@@ -1,0 +1,26 @@
+span.a {
+  /*background-color: red;*/
+}
+
+span.b {
+  position: relative;
+  background-color: #DDFFDD;
+}
+
+span.b:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+span.c {
+  display: none;
+  position: absolute;
+  top: 30px;
+  font-size: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+span.d {
+  background-color: lightblue;
+}
