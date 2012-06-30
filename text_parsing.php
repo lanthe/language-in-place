@@ -78,9 +78,8 @@ function render_text($lines, $dictionary) {
 function get_trans_display($w, $trans) { //not clear how independent this really is
     return "<span class='original_word'>".    //CSS magic that does the little fake bubble
            "<span class='trans_word_positioner'>".
-             "<span class='trans_word'>^</span>".
-             "<br>".
-             "<span class='trans_word'>(<u>".$trans."</u>)</span>".
+             "<span class='trans_word_tip' >▲</span>".
+             "<span class='trans_word'>".$trans."</span>".
            "</span>"
           .$w.
           "</span>";	

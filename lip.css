@@ -13,12 +13,20 @@ span.original_word:hover {
 span.trans_word_positioner {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 1.8em;
   font-size: 10px;
   width: 100%;
   text-align: center;
 }
 
 span.trans_word {
-  background-color: lightblue;
+	background-color: lightBlue;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+span.trans_word_tip {
+	display: block;
+	color: lightBlue;
+	line-height: 14px;
 }
