@@ -1,18 +1,16 @@
-span.a {
-  /*background-color: red;*/
+span.delimiter {
 }
 
-span.b {
+span.original_word {
   position: relative;
-  background-color: #DDFFDD;
 }
 
-span.b:hover {
+span.original_word:hover {
   background-color: yellow;
   cursor: pointer;
 }
 
-span.c {
+span.trans_word_positioner {
   display: none;
   position: absolute;
   top: 30px;
@@ -21,6 +19,6 @@ span.c {
   text-align: center;
 }
 
-span.d {
+span.trans_word {
   background-color: lightblue;
 }
