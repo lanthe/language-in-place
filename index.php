@@ -8,6 +8,7 @@ header('Content-type: text/html; charset=utf-8');
     <title> test </title>
     <link rel="stylesheet" type="text/css" href="lip.css">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+    <meta name="google" value="notranslate">  <!-- don't want chrome's message saying "do you want this page translated" -->
 </head>
 
 <body>
@@ -75,7 +76,7 @@ foreach ($lines as $line) {
       $trans = $dictionary[$w];
       if (!$trans) $trans = "OOPS"; // the word wasn't in the dictionary for some reason
       // the B contains the real word, the C contains two D's and a <br>
-      echo "<span class='b'>".
+      echo "<span class='b'>".    //CSS magic that does the little fake bubble
              "<span class='c'>".
                "<span class='d'>^</span>".
                "<br>".
