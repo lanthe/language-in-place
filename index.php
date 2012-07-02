@@ -16,6 +16,7 @@ header('Content-type: text/html; charset=utf-8');
 
 <?php
 include_once("text_parsing.php");
+include_once("header.php");
 
 
 
@@ -39,20 +40,11 @@ $lines = preg_split("/[\r\n]+/",get_source_text());
 
 $allwords = parse_words($lines);
 $dictionary = build_dictionary($allwords, from_language(), to_language());
-
-
+echo get_header();
 ?>
-<div class='header'>
-		<a href="http://languageinplace.com">
-			<img class='header_logo' src="logo2.png"></img>
-		</a>
-		<a class='header_link' href="not-implemented.php">Login</a>
-		<a class='header_link' href="not-implemented.php">French to English</a>		
-	<div class='change_language_button'></div>
-</div>
 <div class='place_text'>
 <?php 
-render_text($lines, $dictionary);
+  render_text($lines, $dictionary);
 ?>
 </div>
 <div class='wordlist'>
