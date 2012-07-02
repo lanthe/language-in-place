@@ -5,7 +5,10 @@ function get_header() {
 	<html lang='en'>
 
 	<head>
-	    <title> test </title>
+	    <title> French in Place </title>
+		<link rel='icon' 
+		      type='image/png' 
+		      href='favicon.png'>
 	    <link rel='stylesheet' type='text/css' href='lip.css'>
 	    <link rel='stylesheet' type='text/css' href='flags.css'>	    
 	    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>

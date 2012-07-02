@@ -20,8 +20,11 @@ function get_source_text() {
 	return file_get_contents("./french2.txt");
 }
 
+
+$lines2 = wordwrap(get_source_text(),100,"\n");
+echo $lines;
 // TODO we probably want our own line wrapping or sentence parsing
-$lines = preg_split("/[\r\n]+/",get_source_text());
+$lines = preg_split("/[\r\n]+/",$lines2);
 
 $allwords = parse_words($lines);
 $dictionary = build_dictionary($allwords, from_language(), to_language());
