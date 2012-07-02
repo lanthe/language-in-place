@@ -3,6 +3,7 @@ header('Content-type: text/html; charset=utf-8');
 
 include_once("text_parsing.php");
 include_once("header.php");
+include_once("footer.php");
 
 function from_language() {
 	// TODO: based on the URL, choose which language to translate from
@@ -45,6 +46,4 @@ $("span.original_word").click(function() {
 });
 </script>
 
-</body>
-
-</html>
+<?php echo get_footer();  ?>
