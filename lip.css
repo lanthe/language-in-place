@@ -69,3 +69,14 @@ img.header_logo {
 	height: 60px;
 	margin: 12px;
 }
+
+a.header_link {
+	display: inline-block;
+	vertical-align: top;
+	float: right;
+	margin: 10px;
+	text-decoration: none;
+	color: #333;
+	margin-right: 20px;
+	margin-top: 10px;
+}

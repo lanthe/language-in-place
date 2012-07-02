@@ -71,7 +71,7 @@ function render_text($lines, $dictionary) {
 				echo get_trans_display($w, $trans);
 			}
 		}
-		echo "<div style='height:2.5em;'> </div><HR>\n";   // makes space between the lines for the floating trans bubbles
+		echo "<div style='height:2.5em;'> </div>\n";   // makes space between the lines for the floating trans bubbles
 	}
 }
 

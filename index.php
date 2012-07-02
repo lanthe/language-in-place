@@ -46,6 +46,8 @@ $dictionary = build_dictionary($allwords, from_language(), to_language());
 		<a href="http://languageinplace.com">
 			<img class='header_logo' src="logo2.png"></img>
 		</a>
+		<a class='header_link' href="not-implemented.php">Login</a>
+		<a class='header_link' href="not-implemented.php">French to English</a>		
 	<div class='change_language_button'></div>
 </div>
 <div class='place_text'>
