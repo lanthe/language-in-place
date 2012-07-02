@@ -6,6 +6,7 @@ function get_footer() {
              <a class='footer_link' href='not-implemented.php'>Jobs</a>
              <a class='footer_link' href='not-implemented.php'>Contact</a>
           </div>
+          </div>
 		  </body>
           </html>";
 }

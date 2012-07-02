@@ -13,11 +13,11 @@ function get_header() {
 	</head>
 
 	<body>
-
+    <div class='center_column'>
 
 <div class='header'>
 		<a href='/'>
-			<img class='header_logo' src='logo2.png'></img>
+			<img class='header_logo' src='lip-logo.png'></img>
 		</a>
 		<a class='header_link' href='not-implemented.php'>Login</a>
 		<a class='header_link' href='not-implemented.php'>French to English</a>		
