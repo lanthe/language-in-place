@@ -20,6 +20,7 @@ span.trans_word_positioner {
 }
 
 span.trans_word {
+	white-space: nowrap;
 	background-color: lightBlue;
 	border-radius: 4px;
 	padding: 4px;
