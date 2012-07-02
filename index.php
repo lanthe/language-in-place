@@ -1,24 +1,8 @@
 <?php 
 header('Content-type: text/html; charset=utf-8');
-?>
 
-<html lang="en">
-
-<head>
-    <title> test </title>
-    <link rel="stylesheet" type="text/css" href="lip.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-    <meta name="google" value="notranslate">  <!-- don't want chrome's message saying "do you want this page translated" -->
-    <meta http-equiv="Content-Language" content="en_US" /> 
-</head>
-
-<body>
-
-<?php
 include_once("text_parsing.php");
 include_once("header.php");
-
-
 
 function from_language() {
 	// TODO: based on the URL, choose which language to translate from
