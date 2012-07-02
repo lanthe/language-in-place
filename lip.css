@@ -14,7 +14,7 @@ span.trans_word_positioner {
   display: none;
   position: absolute;
   top: 1.8em;
-  font-size: 10px;
+  font-size: 12px;
   width: 100%;
   text-align: center;
 }
@@ -29,4 +29,43 @@ span.trans_word_tip {
 	display: block;
 	color: lightBlue;
 	line-height: 14px;
+}
+
+div.header {
+  height:80px;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 960px;
+  margin-left: 10px;
+  margin-top: 10px;	
+}	
+
+body {	
+  background-color:#EEEEEE;
+}
+
+div.wordlist {
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+	background-color: white;
+	width: 160px;
+	border-radius: 10px;
+	height: 600px;
+	margin-left: 20px;
+}
+
+div.place_text {
+	width: 700px;
+	display: inline-block;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	margin-left:10px;
+}
+
+img.header_logo {
+	height: 60px;
+	margin: 12px;
 }
