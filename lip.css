@@ -1,3 +1,5 @@
+/* place text */
+
 span.delimiter {
 }
 
@@ -32,30 +34,10 @@ span.trans_word_tip {
 	line-height: 14px;
 }
 
-div.header {
-  height:75px;
-  margin-bottom: 20px;
-  width: 920px;
-  margin-left: 10px;
-  margin-top: 10px;	
-}	
+/* whole page */
 
 body {	
   background-color:#EEEEEE;
-}
-
-div.wordlist {
-	display: inline-block;
-	vertical-align: top;
-	width: 160px;
-	height: 600px;
-	margin-left: 16px;
-}
-
-div.place_text {
-	width: 700px;
-	display: inline-block;
-	margin-left:10px;
 }
 
 div.not_implemented_message,
@@ -68,6 +50,40 @@ div.content_area {
 	border-radius: 10px;  /* TODO: need to add all the other browsers' taggies */
 	box-shadow: 0 0 4px #666;	
 }
+
+div.header {
+  height:75px;
+  margin-bottom: 20px;
+  width: 929px;
+  margin-left: 10px;
+  margin-top: 10px;	
+  padding-top: 2px;
+  padding-bottom: 0px;
+  padding-left: 11px;
+}	
+
+
+div.wordlist {
+	display: inline-block;
+	vertical-align: top;
+	width: 160px;
+	height: 600px;
+	margin-left: 16px;
+}
+
+div.wordlist_header {
+	text-align: center;
+	font-weight: 800;
+	margin-bottom: 7px;
+}
+
+div.place_text {
+	width: 700px;
+	display: inline-block;
+	margin-left:10px;
+}
+
+
 img.header_logo {
 	height: 60px;
 	margin-top:10px;
@@ -83,6 +99,8 @@ a.header_link {
 	margin-right: 20px;
 	margin-top: 10px;
 }
+
+/* not-implemented.php */
 
 div.not_implemented_message {
 	margin-left:10px;

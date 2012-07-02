@@ -48,7 +48,7 @@ echo get_header();
 ?>
 </div>
 <div class='wordlist'>
-<span class='wordlist_header'>My Wordlist</span>
+<div class='wordlist_header'>My Wordlist</div>
 <div class='wordlist_words'>veille - eve</div>
 </div>
 
