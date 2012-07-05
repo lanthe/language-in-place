@@ -25,20 +25,22 @@ span.delimiter {
 
 span.original_word {
   position: relative;
+  z-index: 1;
 }
 
 span.original_word:hover {
   background-color: yellow;
   cursor: pointer;
+  z-index: 2;
 }
 
 span.trans_word_positioner {
-  display: none;
-  position: absolute;
-  top: 1.8em;
-  font-size: 12px;
-  width: 100%;
-  text-align: center;
+	display: none;
+	position: absolute;
+	top: 1.8em;
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
 }
 
 span.trans_word {
