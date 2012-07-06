@@ -16,15 +16,27 @@ function to_language() {
 }
 
 function get_source_text() {
-	// TODO
+
 	return file_get_contents("./french2.txt");
+/*    $article_xml = new SimpleXMLElement(file_get_contents("http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr"));
+    $article_text = $article_xml->channel->item[0]->description;
+
+	//handle HTML tags 
+	// TODO keep formatting for strong and em
+	// TODO support in-article images somehow
+	$bad_tags = array("</div>", "<div>", "<p>","</p>","<strong>","</strong>","<em>","</em>");
+	$carriage_returns = array("<br/>","<br>");
+	$article_text = str_replace($bad_tags, "", $article_text);
+	$article_text = str_replace($carriage_returns,"\n",$article_text);
+
+    return $article_text; */
+    
 }
 
 
-$lines2 = wordwrap(get_source_text(),100,"\n");
-echo $lines;
-// TODO we probably want our own line wrapping or sentence parsing
-$lines = preg_split("/[\r\n]+/",$lines2);
+$wrapped_lines = wordwrap(get_source_text(),105,"\n");
+$lines = preg_split("/[\r\n]+/",$wrapped_lines);
+
 
 $allwords = parse_words($lines);
 $dictionary = build_dictionary($allwords, from_language(), to_language());
@@ -51,6 +63,13 @@ echo get_header();
 $("span.original_word").click(function() {
   $(this).children().toggle();
 });
+
+function add_translations () {
+  $("span.original_word").each(function () {
+    $(this.firstChild.children[1]).text(dict[this.innerText]);
+  });
+}
+document.onload = add_translations();
 </script>
 
 <?php echo get_footer();  ?>

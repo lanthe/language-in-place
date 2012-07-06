@@ -66,7 +66,7 @@ function render_text($lines, $dictionary) {
 			if (preg_match($reg, $w) > 0) {     // if this "word" is a string of delimiters (ie punctuation)
 			    echo "<span class='delimiter'>".$w."</span>";     // just print the delimiter string
 			} else {
-				$trans = $dictionary[$w];
+				//$trans = $dictionary[$w];   //we're going to try to render this client side... TODO clean this
 				if (!$trans) $trans = "OOPS"; // the word wasn't in the dictionary for some reason
 				echo get_trans_display($w, $trans);
 			}
