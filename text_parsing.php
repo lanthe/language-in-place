@@ -23,8 +23,9 @@ function build_dictionary($allwords, $from_lang, $to_lang) {
 	$dictionary = array();
 	$batch = array();
 	$len = 0;
+	$w = "";
 	foreach ($allwords as $w) {
-	  if (!array_key_exists($dictionary, $w)) {
+	  if (!array_key_exists($w,$dictionary)) {
 	    $batch[] = $w;
 	    $len += strlen($w);
 	  }
