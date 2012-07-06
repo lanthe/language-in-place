@@ -38,8 +38,8 @@ $wrapped_lines = wordwrap(get_source_text(),105,"\n");
 $lines = preg_split("/[\r\n]+/",$wrapped_lines);
 
 
-$allwords = parse_words($lines);
-$dictionary = build_dictionary($allwords, from_language(), to_language());
+//$allwords = parse_words($lines);
+//$dictionary = build_dictionary($allwords, from_language(), to_language());
 echo get_header();
 ?>
 <div class='title_text'>
@@ -65,9 +65,13 @@ $("span.original_word").click(function() {
 });
 
 function add_translations () {
-  $("span.original_word").each(function () {
-    $(this.firstChild.children[1]).text(dict[this.innerText]);
-  });
+	$.ajax({
+	  url: "dictionary.php",
+	}).done(function(data) { 
+  		$("span.original_word").each(function () {
+    		$(this.firstChild.children[1]).text(data[this.innerText]); //TODO don't use innerText
+  		});
+	});
 }
 document.onload = add_translations();
 </script>
