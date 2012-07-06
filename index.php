@@ -6,7 +6,9 @@ include_once("text_parsing.php");
 include_once("header.php");
 include_once("footer.php");
 
-$wrapped_lines = wordwrap(get_source_text(),105,"\n");
+
+$wrapped_lines = wordwrap(get_source_text(),150,"\n");
+//$wrapped_lines = wordwrap(get_source_text(),105,"\n");
 $lines = preg_split("/[\r\n]+/",$wrapped_lines);
 
 
@@ -23,7 +25,7 @@ echo get_header();
   render_text($lines, $dictionary);
 ?>
 </div>
-<div class='wordlist'>
+<div class='wordlist' style='visibility:hidden;'>
 <div class='wordlist_header'>My Wordlist</div>
 <div class='wordlist_words'>veille - eve</div>
 </div>

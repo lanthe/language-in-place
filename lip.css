@@ -70,7 +70,7 @@ div.center_column  {
 
 div.not_implemented_message,
 div.place_text,
-div.wordlist,
+/*div.wordlist,*/
 div.content_area {
 	padding: 20px;
 	background-color: white;
@@ -95,7 +95,7 @@ div.wordlist {
 	display: inline-block;
 	vertical-align: top;
 	width: 160px;
-	height: 600px;
+	/*height: 600px;*/
 	margin-left: 16px;
 }
 
@@ -106,7 +106,8 @@ div.wordlist_header {
 }
 
 div.place_text {
-	width: 700px;
+	/* width: 700px;*/
+	width:960px;
 	display: inline-block;
 	margin-left:10px;
 }
