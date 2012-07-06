@@ -23,15 +23,20 @@ div.title_article_name {
 span.delimiter {
 }
 
-span.original_word {
+span.word_holder {
   position: relative;
   z-index: 1;
 }
 
-span.original_word:hover {
+span.word_holder:hover {
   background-color: yellow;
   cursor: pointer;
   z-index: 2;
+}
+
+span.original_word {
+	
+	
 }
 
 span.trans_word_positioner {

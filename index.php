@@ -31,19 +31,16 @@ echo get_header();
 </div>
 
 <script type='text/javascript'>
-<?php
-  echo "var dict = ".json_encode($dictionary).";\n";
-?>
-$("span.original_word").click(function() {
-  $(this).children().toggle();
+$("span.word_holder").click(function() {
+  $(this.firstChild).toggle();
 });
 
 function add_translations () {
 	$.ajax({
 	  url: "dictionary.php",
 	}).done(function(data) { 
-  		$("span.original_word").each(function () {
-    		$(this.firstChild.children[1]).text(data[this.innerText]); //TODO don't use innerText
+  		$("span.word_holder").each(function () {
+    		$(this.firstChild.children[1]).text(data[$(this.children[1]).text()]);
   		});
 	});
 }
