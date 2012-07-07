@@ -25,12 +25,24 @@ function to_language() {
 }
 
 function get_source_text() {
+    switch ($_SERVER["SERVER_NAME"]) {
+	    case "spanishinplace.com":
+			$rss_url = "http://economia.elpais.com/rss/elpais/portada.xml";
+	    	$article_source = "Portada";
+			break;
+		case "localhost":
+		case "frenchinplace.com":
+		default:
+			$rss_url = "http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr";
+		    $article_source = "France 24";
+			break;
+	}
 
 //	return file_get_contents("./french2.txt");
-    $article_xml = new SimpleXMLElement(file_get_contents("http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr"));
+    $article_xml = new SimpleXMLElement(file_get_contents($rss_url));
     $article_text = strip_tags($article_xml->channel->item[0]->description);
 	$article_title = $article_xml->channel->item[0]->title;
-	$article_source = "France 24";
+	$article_source = $_SERVER["SERVER_NAME"];
 	//handle HTML tags 
 	// TODO keep formatting for strong and em
 	// TODO support in-article images somehow
