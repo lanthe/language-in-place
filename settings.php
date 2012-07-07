@@ -14,9 +14,26 @@ class Article
   }
 }
 
+function page_name() {
+    switch ($_SERVER["SERVER_NAME"]) {
+	    case "spanishinplace.com":
+			return "Spanish in Place";
+		case "localhost":
+		case "frenchinplace.com":
+		default:
+			return "French in Place";	
+	}
+}
+
 function from_language() {
-	// TODO: based on the URL, choose which language to translate from
-	return "fr";
+    switch ($_SERVER["SERVER_NAME"]) {
+	    case "spanishinplace.com":
+			return "es";
+		case "localhost":
+		case "frenchinplace.com":
+		default:
+			return "fr";
+	}
 }
 
 function to_language() {

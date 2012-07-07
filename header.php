@@ -1,11 +1,11 @@
 <?php
+include_once("settings.php");
 function get_header() {
-
   return "
 	<html lang='en'>
 
 	<head>
-	    <title> French in Place </title>
+	    <title>".page_name()."</title>
 		<link rel='icon' 
 		      type='image/png' 
 		      href='favicon.png'>
