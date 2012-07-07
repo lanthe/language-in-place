@@ -4,7 +4,8 @@ header('Content-type: json; charset=utf-8');
 include_once("settings.php");
 include_once("text_parsing.php");
 
-$wrapped_lines = wordwrap(get_source_text(),105,"\n");
+$article = get_source_text();
+$wrapped_lines = wordwrap($article->text,105,"\n");
 $lines = preg_split("/[\r\n]+/",$wrapped_lines);
 
 

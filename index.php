@@ -6,8 +6,8 @@ include_once("text_parsing.php");
 include_once("header.php");
 include_once("footer.php");
 
-
-$wrapped_lines = wordwrap(get_source_text(),150,"\n");
+$article = get_source_text();
+$wrapped_lines = wordwrap($article->text,150,"\n");
 //$wrapped_lines = wordwrap(get_source_text(),105,"\n");
 $lines = preg_split("/[\r\n]+/",$wrapped_lines);
 
@@ -17,8 +17,8 @@ $lines = preg_split("/[\r\n]+/",$wrapped_lines);
 echo get_header();
 ?>
 <div class='title_text'>
-	<div class='title_source'>Le Monde</div>
-	<div class='title_article_name'>Pacte de croissance : Merkel fait état de 'progrès significatifs'</div>
+	<div class='title_source'><?php echo $article->source; ?></div>
+	<div class='title_article_name'><?php echo $article->title; ?></div>
 </div>
 <div class='place_text'>
 <?php 
