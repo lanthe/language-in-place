@@ -18,6 +18,10 @@ function page_name() {
     switch ($_SERVER["SERVER_NAME"]) {
 	    case "spanishinplace.com":
 			return "Spanish in Place";
+		case "italianinplace.com":
+			return "Italian in Place";
+		case "germaninplace.com":
+			return "German in Place";
 		case "localhost":
 		case "frenchinplace.com":
 		default:
@@ -29,6 +33,10 @@ function from_language() {
     switch ($_SERVER["SERVER_NAME"]) {
 	    case "spanishinplace.com":
 			return "es";
+		case "italianinplace.com":
+			return "it";
+		case "germaninplace.com":
+			return "de";
 		case "localhost":
 		case "frenchinplace.com":
 		default:
@@ -44,14 +52,22 @@ function to_language() {
 function get_source_text() {
     switch ($_SERVER["SERVER_NAME"]) {
 	    case "spanishinplace.com":
-			$rss_url = "http://economia.elpais.com/rss/elpais/portada.xml";
-	    	$article_source = "Portada";
+			$rss_url = "http://fulltextrssfeed.com/www.eluniversal.com.mx/rss/mundo.xml";
+			$article_source = "El Mundo";
+			break;
+	    case "italianinplace.com":
+			$rss_url = "http://fulltextrssfeed.com/www.eluniversal.com.mx/rss/mundo.xml";
+			$article_source = "El Mundo";
+			break;
+		case "germaninplace.com":
+			$rss_url = "http://fulltextrssfeed.com/newsfeed.zeit.de/index";
+			$article_source = "Zeit Online";
 			break;
 		case "localhost":
 		case "frenchinplace.com":
 		default:
 			$rss_url = "http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr";
-		    $article_source = "France 24";
+			$article_source = "France 24";
 			break;
 	}
 
@@ -59,7 +75,6 @@ function get_source_text() {
     $article_xml = new SimpleXMLElement(file_get_contents($rss_url));
     $article_text = strip_tags($article_xml->channel->item[0]->description);
 	$article_title = $article_xml->channel->item[0]->title;
-	$article_source = $_SERVER["SERVER_NAME"];
 	//handle HTML tags 
 	// TODO keep formatting for strong and em
 	// TODO support in-article images somehow
