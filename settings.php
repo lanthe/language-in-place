@@ -56,8 +56,8 @@ function get_source_text() {
 			$article_source = "El Mundo";
 			break;
 	    case "italianinplace.com":
-			$rss_url = "http://fulltextrssfeed.com/www.eluniversal.com.mx/rss/mundo.xml";
-			$article_source = "El Mundo";
+			$rss_url = "http://fulltextrssfeed.com/lastampa.feedsportal.com/c/32418/f/637885/index.rss";
+			$article_source = "La Stampa";
 			break;
 		case "germaninplace.com":
 			$rss_url = "http://fulltextrssfeed.com/newsfeed.zeit.de/index";
