@@ -20,9 +20,6 @@ div.title_article_name {
 
 /* place text */
 
-span.delimiter {
-}
-
 span.word_holder {
   position: relative;
   z-index: 1;
@@ -46,6 +43,7 @@ span.trans_word_positioner {
 	font-size: 12px;
 	width: 100%;
 	text-align: center;
+	line-height: 100%;
 }
 
 span.trans_word {
@@ -53,6 +51,7 @@ span.trans_word {
 	background-color: lightBlue;
 	border-radius: 4px;
 	padding: 4px;
+	font-weight: normal;
 }
 
 span.trans_word_tip {
@@ -115,6 +114,7 @@ div.place_text {
 	width:960px;
 	display: inline-block;
 	margin-left:10px;
+	line-height: 350%;
 }
 
 /* header and footer */

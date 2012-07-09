@@ -1,6 +1,6 @@
 <?php 
 // whitespace and punctuation constant
-$reg = "/([\s.,\%\/\\\(\)\:\?\[\]\"]+)/i";
+$reg = "/([\s.,\%\/\\\(\)\:\?\[\]\"]+)|(<.*?>)/i";
 
 
 // we need the individual words so we can build a dictionary later
@@ -9,7 +9,7 @@ function parse_words($lines) {
 
 	$allwords = array();
 	foreach ($lines as $line) {
-	  $words = preg_split($reg, $line, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+	  $words = preg_split($reg, $line, -1, PREG_SPLIT_NO_EMPTY); //no need to capture the delimiters here
 	  foreach ($words as $w) {
 	    if (preg_match($reg, $w) == 0) {
 	      $allwords[] = $w;
@@ -65,22 +65,19 @@ function render_text($lines, $dictionary) {
 		$words = preg_split($reg, $line, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 		foreach ($words as $w) {   
 			if (preg_match($reg, $w) > 0) {     // if this "word" is a string of delimiters (ie punctuation)
-			    echo "<span class='delimiter'>".$w."</span>";     // just print the delimiter string
+				echo $w;
 			} else {
-				//$trans = $dictionary[$w];   //we're going to try to render this client side... TODO clean this
-				if (!$trans) $trans = "OOPS"; // the word wasn't in the dictionary for some reason
-				echo get_trans_display($w, $trans);
+				echo get_trans_display($w);
 			}
 		}
-		echo "<div style='height:2.5em;'> </div>\n";   // makes space between the lines for the floating trans bubbles
 	}
 }
 
-function get_trans_display($w, $trans) { //not clear how independent this really is
+function get_trans_display($w) { //not clear how independent this really is
     return "<span class='word_holder'>".    //CSS magic that does the little fake bubble
            "<span class='trans_word_positioner'>".
-             "<span class='trans_word_tip' >▲</span>".
-             "<span class='trans_word'>".$trans."</span>".
+             "<span class='trans_word_tip'>▲</span>".
+             "<span class='trans_word'>OOPS</span>".
            "</span>".
           "<span class='original_word'>".$w."</span>".
           "</span>";	

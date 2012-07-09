@@ -7,13 +7,8 @@ include_once("header.php");
 include_once("footer.php");
 
 $article = get_source_text();
-$wrapped_lines = wordwrap($article->text,150,"\n");
-//$wrapped_lines = wordwrap(get_source_text(),105,"\n");
-$lines = preg_split("/[\r\n]+/",$wrapped_lines);
+$lines = preg_split("/[\r\n]+/",$article->text);
 
-
-//$allwords = parse_words($lines);
-//$dictionary = build_dictionary($allwords, from_language(), to_language());
 echo get_header();
 ?>
 <div class='title_text'>
