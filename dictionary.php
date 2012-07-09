@@ -5,8 +5,7 @@ include_once("settings.php");
 include_once("text_parsing.php");
 
 $article = get_source_text();
-$wrapped_lines = wordwrap($article->text,105,"\n");
-$lines = preg_split("/[\r\n]+/",$wrapped_lines);
+$lines = preg_split("/[\r\n]+/",$article->text);
 
 
 $allwords = parse_words($lines);
