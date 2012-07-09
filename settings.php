@@ -31,13 +31,13 @@ function page_name() {
 
 function from_language() {
     switch ($_SERVER["SERVER_NAME"]) {
+		case "localhost":
 	    case "spanishinplace.com":
 			return "es";
 		case "italianinplace.com":
 			return "it";
 		case "germaninplace.com":
 			return "de";
-		case "localhost":
 		case "frenchinplace.com":
 		default:
 			return "fr";
@@ -51,6 +51,7 @@ function to_language() {
 
 function get_source_text() {
     switch ($_SERVER["SERVER_NAME"]) {
+		case "localhost":
 	    case "spanishinplace.com":
 			$rss_url = "http://fulltextrssfeed.com/www.eluniversal.com.mx/rss/mundo.xml";
 			$article_source = "El Mundo";
@@ -63,7 +64,6 @@ function get_source_text() {
 			$rss_url = "http://fulltextrssfeed.com/newsfeed.zeit.de/index";
 			$article_source = "Zeit Online";
 			break;
-		case "localhost":
 		case "frenchinplace.com":
 		default:
 			$rss_url = "http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr";

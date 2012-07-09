@@ -2,7 +2,6 @@
 // whitespace and punctuation constant
 $reg = "/([\s.,\%\/\\\(\)\:\?\[\]\"]+)|(<.*?>)/i";
 
-
 // we need the individual words so we can build a dictionary later
 function parse_words($lines) {
 	global $reg;  //use the global macro
@@ -58,14 +57,16 @@ function process_batch($batch, $from_lang, $to_lang) {
   }
   return $d;
 }
-
-function render_text($lines, $dictionary) {
+$areg = "(<[aA].*?>|</[aA]>)";
+function render_text($lines) {
 	global $reg;
+	global $areg;
 	foreach ($lines as $line) {
 		$words = preg_split($reg, $line, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 		foreach ($words as $w) {   
 			if (preg_match($reg, $w) > 0) {     // if this "word" is a string of delimiters (ie punctuation)
-				echo $w;
+				if (!preg_match($areg,$w))
+					echo $w;
 			} else {
 				echo get_trans_display($w);
 			}

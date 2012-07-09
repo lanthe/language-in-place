@@ -17,7 +17,7 @@ echo get_header();
 </div>
 <div class='place_text'>
 <?php 
-  render_text($lines, $dictionary);
+  render_text($lines);
 ?>
 </div>
 <div class='wordlist' style='visibility:hidden;'>
