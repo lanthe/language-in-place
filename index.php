@@ -93,8 +93,8 @@ function add_click_handlers() {
 }
 
 $(document).ready(function() {
-	add_translations();
 	add_click_handlers();
+	add_translations();
 });
 </script>
 

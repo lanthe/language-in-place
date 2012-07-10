@@ -35,8 +35,7 @@ function get_header() {
     <div class='center_column'>
 
     <div class='header'>
-	      <img class='header_logo' src='lip-logo.png'></img>
-		  <a class='header_link' href='not-implemented.php'>Login</a>
+	      <a href='/'><img class='header_logo' src='lip-logo.png'></img></a>
 		  <div id='change_language' class='header_link'>
 		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
 		    <img src='' class='flag flag-fr'/>
