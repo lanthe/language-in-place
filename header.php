@@ -34,14 +34,14 @@ function get_header() {
 	<body>
     <div class='center_column'>
 
-<div class='header'>
+    <div class='header'>
 	      <img class='header_logo' src='lip-logo.png'></img>
 		  <a class='header_link' href='not-implemented.php'>Login</a>
 		  <div id='change_language' class='header_link'>
 		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
 		    <img src='' class='flag flag-fr'/>
 		  </div>	
-</div>
+    </div>
 ";
 }
 ?>

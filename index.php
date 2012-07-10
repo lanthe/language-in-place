@@ -5,21 +5,11 @@ include_once("settings.php");
 include_once("text_parsing.php");
 include_once("header.php");
 include_once("footer.php");
-
-$article = get_source_text();
-$lines = preg_split("/[\r\n]+/",$article->text);
+include_once("text_view.php");
 
 echo get_header();
+echo text_view();
 ?>
-<div class='title_text'>
-	<div class='title_source'><?php echo $article->source; ?></div>
-	<div class='title_article_name'><?php echo $article->title; ?></div>
-</div>
-<div class='place_text'>
-<?php 
-  render_text($lines);
-?>
-</div>
 <div class='wordlist' style='visibility:hidden;'>
 <div class='wordlist_header'>My Wordlist</div>
 <div class='wordlist_words'>veille - eve</div>

@@ -59,6 +59,7 @@ function process_batch($batch, $from_lang, $to_lang) {
 }
 $areg = "(<[aA].*?>|</[aA]>)";
 function render_text($lines) {
+	$str="";
 	global $reg;
 	global $areg;
 	foreach ($lines as $line) {
@@ -66,12 +67,13 @@ function render_text($lines) {
 		foreach ($words as $w) {   
 			if (preg_match($reg, $w) > 0) {     // if this "word" is a string of delimiters (ie punctuation)
 				if (!preg_match($areg,$w))
-					echo $w;
+					$str .= $w;
 			} else {
-				echo get_trans_display($w);
+				$str .= get_trans_display($w);
 			}
 		}
 	}
+	return $str;
 }
 
 function get_trans_display($w) { //not clear how independent this really is
