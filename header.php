@@ -35,15 +35,13 @@ function get_header() {
     <div class='center_column'>
 
 <div class='header'>
-		<a href='/'>
-			<img class='header_logo' src='lip-logo.png'></img>
-		</a>
-		<a class='header_link' href='not-implemented.php'>Login</a>
-		<a class='header_link' href='not-implemented.php'>
-		  <img src='blank.gif' class='flag flag-us'/> &nbspto&nbsp 
-		  <img src='blank.gif' class='flag flag-fr'/>
-		</a>		
-	<div class='change_language_button'></div>
-</div>";
+	      <img class='header_logo' src='lip-logo.png'></img>
+		  <a class='header_link' href='not-implemented.php'>Login</a>
+		  <div id='change_language' class='header_link'>
+		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
+		    <img src='' class='flag flag-fr'/>
+		  </div>	
+</div>
+";
 }
 ?>

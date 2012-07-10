@@ -45,8 +45,10 @@ function from_language() {
 }
 
 function to_language() {
-	// TODO: based on browser and cookie settings, choose which language to translate to
-	return "en";
+	session_start();
+	if(array_key_exists('to_lang', $_SESSION) == False)
+	  $_SESSION["to_lang"] = "en";
+	return $_SESSION["to_lang"];
 }
 
 function get_source_text() {
