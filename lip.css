@@ -55,8 +55,8 @@ div.overlay_text {
 }
 
 /* CSS to make other sites render their HTML correctly */
-div.common_icon {
-	visibility:hidden;
+div.article-toolbar {
+	display:none;
 }
 
 /* title text */
