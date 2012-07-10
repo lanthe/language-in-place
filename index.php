@@ -6,8 +6,12 @@ include_once("text_parsing.php");
 include_once("header.php");
 include_once("footer.php");
 include_once("text_view.php");
-
-echo get_header();
+$article_plus_one = article_num()+1;
+$article_minus_one = article_num()-1;
+echo get_header();  
+echo "<button class='change_article_button' id='prev_button'>Prev</button>";
+echo text_view_titles();
+echo "<button class='change_article_button' id='next_button'>Next</button>";
 echo text_view();
 ?>
 <div class='wordlist' style='visibility:hidden;'>
@@ -43,6 +47,7 @@ echo text_view();
 function add_translations () {
 	$.ajax({
 	  url: "dictionary.php",
+	  data: "num=" + <?php echo article_num(); ?>,
 	}).done(function(dictionary) { 
   		$("span.word_holder").each(function () {
     		$(this.firstChild.children[1]).text(dictionary[$(this.children[1]).text()]);
@@ -68,6 +73,23 @@ function add_click_handlers() {
   		  add_translations();
 	    });
 	});	
+
+    <?php echo "var artnum = ".strval(article_num()).";"; ?>
+	
+	$('#prev_button').click(function () {
+		var newnum = artnum -1;
+		document.location.href = "?num=" + newnum;
+	});
+	$('#next_button').click(function() {
+		var newnum = artnum +1;
+		document.location.href ="?num=" + newnum;		
+	});
+	
+	if (artnum == 0)
+	  $('#prev_button').hide();
+	if (artnum == 3)
+	  $('#next_button').hide();
+	
 }
 
 $(document).ready(function() {

@@ -34,9 +34,9 @@ function page_name() {
 
 function from_language() {
     switch ($_SERVER["SERVER_NAME"]) {
+		case "localhost":
 	    case "spanishinplace.com":
 			return "es";
-		case "localhost":
 		case "italianinplace.com":
 			return "it";
 		case "germaninplace.com":
@@ -75,10 +75,9 @@ function get_source_text() {
 			break;
 	}
 
-//	return file_get_contents("./french2.txt");
     $article_xml = new SimpleXMLElement(file_get_contents($rss_url));
-    $article_text = $article_xml->channel->item[0]->description;
-	$article_title = $article_xml->channel->item[0]->title;
+    $article_text = $article_xml->channel->item[article_num()]->description;
+	$article_title = $article_xml->channel->item[article_num()]->title;
 	//handle HTML tags 
 	// TODO keep formatting for strong and em
 	// TODO support in-article images somehow
@@ -90,7 +89,13 @@ function get_source_text() {
     return new Article($article_title,$article_text,$article_source);    
 }
 
-
+function article_num() {
+	if (array_key_exists("num",$_REQUEST) and intval($_REQUEST["num"]) >= 0 and intval($_REQUEST["num"]) < 5)
+	  $item_num = intval($_REQUEST["num"]);
+    else
+      $item_num = 0;
+    return $item_num;	
+}
 
 
 ?>
