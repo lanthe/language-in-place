@@ -30,7 +30,7 @@ function build_dictionary($allwords, $from_lang, $to_lang) {
 	  }
 	  // the limit on URL length is 2000, including the api key and a &q= for each word
 	  // the maximum batch size is 128, though this appears to be under documented
-	  if ($len > 200 || sizeof($batch) > 127) {
+	  if ($len > 1700 || sizeof($batch) > 127) {
 	    $dictionary += process_batch($batch, $from_lang, $to_lang);
 	    $len = 0;
 	    $batch = array();
