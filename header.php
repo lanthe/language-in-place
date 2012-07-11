@@ -8,7 +8,7 @@ function get_header() {
 	    <title>".page_name()."</title>
 		<link rel='icon' 
 		      type='image/png' 
-		      href='favicon.png'>
+		      href='imgs/favicon.png'>
 	    <link rel='stylesheet' type='text/css' href='lip.css'>
 	    <link rel='stylesheet' type='text/css' href='flags.css'>	    
 	    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
@@ -35,7 +35,7 @@ function get_header() {
     <div class='center_column'>
 
     <div class='header'>
-	      <a href='/'><img class='header_logo' src='lip-logo.png'></img></a>
+	      <a href='/'><img class='header_logo' src='imgs/lip-logo.png'></img></a>
 		  <div id='change_language' class='header_link'>
 		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
 		    <img src='' class='flag flag-fr'/>
