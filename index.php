@@ -23,7 +23,6 @@ echo text_view();
 		To learn other languages, try out our partner sites:<br>
 		<a href="http://spanishinplace.com">Spanish in Place</a><br>
 		<a href="http://italianinplace.com">Italian in Place</a><br>
-		<a href="http://germaninplace.com">German in Place</a><br>
 		<a href="http://frenchinplace.com">French in Place</a><br>		
 	</div>
 	<hr>
