@@ -15,7 +15,7 @@ echo "
 <br>
 <p>When we were growing up, learning to read foreign languages was a grind.  We remember slogging through tired textbook passages, enduring the endless routine of picking up and putting down ironclad translation dictionaries.  This made our arms tired.  Even worse, it made our brain tired.  We longed for content that we found interesting and fresh – like current news and the kind of books we were already reading in English.  We loved foreign language and culture and knew there was a better way, for students and for teachers.</p>
 <br>
-<p>At Learning in Place, we believe becoming immersed in foreign language is one of life’s most rewarding experiences.  So we decided to make it possible to read and translate any text you want - and to make it simple, fun and easy.</p>
+<p>At Language in Place, we believe becoming immersed in foreign language is one of life’s most rewarding experiences.  So we decided to make it possible to read and translate any text you want - and to make it simple, fun and easy.</p>
 <br>
 <p>Agree with us?  Come join us!</p><br>
 <p>Any thoughts, ideas or suggestions?  Send us <a href='mailto:languageinplace@gmail.com'>feedback</a>!</p>
