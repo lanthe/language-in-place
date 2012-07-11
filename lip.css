@@ -114,8 +114,8 @@ span.original_word {
 span.trans_word_positioner {
 	display: none;
 	position: absolute;
-	top: 1.8em;
-	font-size: 12px;
+	top: 1.2em;
+	font-size: 13px;
 	width: 100%;
 	text-align: center;
 	line-height: 100%;
