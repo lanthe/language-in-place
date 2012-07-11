@@ -1,8 +1,14 @@
+div.change_article_button_holder {
+	display:inline-block;
+	width: 70px;
+	height: 20px;
+}
+
 button.change_article_button {
 	width: 70px;
-	display: inline-block;
 	height: 23px;
 	margin-left: 10px;
+	display:none;
 }
 
 #change_language:hover {

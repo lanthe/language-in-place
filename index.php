@@ -6,12 +6,12 @@ include_once("text_parsing.php");
 include_once("header.php");
 include_once("footer.php");
 include_once("text_view.php");
-$article_plus_one = article_num()+1;
-$article_minus_one = article_num()-1;
+
+
 echo get_header();  
-echo "<button class='change_article_button' id='prev_button'>Prev</button>";
+echo "<div class='change_article_button_holder'><button class='change_article_button' id='prev_button'>Prev</button></div>";
 echo text_view_titles();
-echo "<button class='change_article_button' id='next_button'>Next</button>";
+echo "<div class='change_article_button_holder'><button class='change_article_button' id='next_button'>Next</button></div>";
 echo text_view();
 ?>
 <div class='wordlist' style='visibility:hidden;'>
@@ -84,10 +84,10 @@ function add_click_handlers() {
 		document.location.href ="?num=" + newnum;		
 	});
 	
-	if (artnum == 0)
-	  $('#prev_button').hide();
-	if (artnum == 3)
-	  $('#next_button').hide();
+	if (artnum != 0)
+	  $('#prev_button').show();
+	if (artnum != 3)
+	  $('#next_button').show();
 	
 }
 
