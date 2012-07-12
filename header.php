@@ -2,6 +2,8 @@
 include_once("settings.php");
 function get_header() {
   return "
+ 	<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 
+Transitional//EN\">
 	<html lang='en'>
 
 	<head>

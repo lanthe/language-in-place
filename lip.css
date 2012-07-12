@@ -1,3 +1,7 @@
+a img {
+  border: none;
+}
+
 div.change_article_button_holder {
 	display:inline-block;
 	width: 70px;

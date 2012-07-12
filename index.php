@@ -46,7 +46,7 @@ echo text_view();
 function add_translations () {
 	$.ajax({
 	  url: "dictionary.php",
-	  data: "num=" + <?php echo article_num(); ?>,
+	  data: "num=" + <?php echo article_num(); ?>
 	}).done(function(dictionary) { 
   		$("span.word_holder").each(function () {
     		$(this.firstChild.children[1]).text(dictionary[$(this.children[1]).text()]);
@@ -67,7 +67,7 @@ function add_click_handlers() {
 	  $('div.overlay_background').toggle();
 	  $('div.overlay').toggle();
 	  $.ajax({
-	    url: 'change_language.php?new_language=' + $("#to_lang option:selected").val(),
+	    url: 'change_language.php?new_language=' + $("#to_lang option:selected").val()
 	    }).done(function(data) { 
   		  add_translations();
 	    });
