@@ -34,7 +34,6 @@ function page_name() {
 
 function from_language() {
     switch ($_SERVER["SERVER_NAME"]) {
-		case "localhost":
 	    case "spanishinplace.com":
 			return "es";
 		case "italianinplace.com":
@@ -42,6 +41,7 @@ function from_language() {
 		case "germaninplace.com":
 			return "de";
 		case "frenchinplace.com":
+		case "localhost":
 		default:
 			return "fr";
 	}
@@ -70,8 +70,8 @@ function get_source_text() {
 			break;
 		case "fr":
 		default:
-			$rss_url = "http://fulltextrssfeed.com/blogs.france24.com/blog_feed.rss/fr";
-			$article_source = "France 24";
+			$rss_url = "http://fulltextrssfeed.com/rss.leparisien.fr/leparisien/rss/actualites-a-la-une.xml";
+			$article_source = "Le Parisien";
 			break;
 	}
 
