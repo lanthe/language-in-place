@@ -37,7 +37,7 @@ Transitional//EN\">
 
 	<body>
 
-<script type="text/javascript">
+<script type='text/javascript'>
   var uvOptions = {};
   (function() {
     var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
