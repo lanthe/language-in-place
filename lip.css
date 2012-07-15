@@ -15,10 +15,7 @@ button.change_article_button {
 	display:none;
 }
 
-#change_language:hover {
-	cursor:pointer;
-	background-color:gray;
-}
+
 
 #change_language {
 	border-radius:2px;
@@ -203,12 +200,12 @@ img.header_logo {
 }
 
 a.footer_link,
-.header_link {
+a.header_link {
 	text-decoration: none;
 	font-size: 14px;
 }
 
-.header_link {
+div.header_link {
 	text-shadow: 0 0 4px black;
 	margin-right: 20px;
 	margin-top: 10px;
@@ -217,6 +214,15 @@ a.footer_link,
 	display: inline-block;
 	vertical-align: top;	
     color: #DDD;
+}
+
+a.header_link {
+	color: #DDD;
+}
+
+.header_link:hover {
+	cursor:pointer;
+	background-color:gray;
 }
 
 a.footer_link {

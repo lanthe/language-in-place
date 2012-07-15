@@ -56,6 +56,7 @@ Transitional//EN\">
 		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
 		    <img src='' class='flag flag-fr'/>
 		  </div>	
+		  <div class='header_link'><a class='header_link' href='for_teachers.php'>For Teachers</a></div>
     </div>
 ";
 }
