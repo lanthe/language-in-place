@@ -75,7 +75,12 @@ function get_source_text() {
 			break;
 	}
 
-    $article_xml = new SimpleXMLElement(file_get_contents($rss_url));
+    //unfortunately, fulltextrssfeed sometimes throws PHP warnings and breaks everything
+    $stuff = file_get_contents($rss_url);
+    $stuff = substr($stuff,strpos($stuff,"<?xml"));
+    $stuff = substr($stuff,0,strpos($stuff,"</rss>")+6);
+
+    $article_xml = new SimpleXMLElement($stuff);
     $article_text = $article_xml->channel->item[article_num()]->description;
 	$article_title = $article_xml->channel->item[article_num()]->title;
 	//handle HTML tags 
@@ -85,8 +90,7 @@ function get_source_text() {
 	//$carriage_returns = array("<br/>","<br>");
 	//$article_text = str_replace($bad_tags, "", $article_text);
 	//$article_text = str_replace($carriage_returns,"\n",$article_text);
-
-    return new Article($article_title,$article_text,$article_source);    
+    return new Article($article_title,$article_text,$article_source);
 }
 
 function article_num() {
