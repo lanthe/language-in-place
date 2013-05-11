@@ -26,6 +26,8 @@ function page_name() {
 			return "Italian in Place";
 		case "de":
 			return "German in Place";
+        case "hi":
+            return "Hindi in Place";
 		case "fr":
 		default:
 			return "French in Place";	
@@ -41,9 +43,11 @@ function from_language() {
 		case "germaninplace.com":
 			return "de";
 		case "frenchinplace.com":
-		case "localhost":
-		default:
 			return "fr";
+        case "localhost":
+        default:
+        case "hindiinplace.com":
+            return "hi";
 	}
 }
 
@@ -69,10 +73,14 @@ function get_source_text() {
 			$article_source = "Zeit Online";
 			break;
 		case "fr":
-		default:
 			$rss_url = "http://fulltextrssfeed.com/rss.leparisien.fr/leparisien/rss/actualites-a-la-une.xml";
 			$article_source = "Le Parisien";
 			break;
+        case "hi":
+            $rss_url = "http://fulltextrssfeed.com/rss.jagran.com/local/uttar-pradesh/kanpur-city.xml";
+            $rss_url = "http://fulltextrssfeed.com/feeds.bbc.co.uk/hindi/index.xml";
+            $article_source = "BBC Hindi Feed";
+            break;
 	}
 
     //unfortunately, fulltextrssfeed sometimes throws PHP warnings and breaks everything
