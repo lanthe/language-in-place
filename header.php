@@ -16,11 +16,13 @@ Transitional//EN\">
 	    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
 	    <meta name='google' value='notranslate'>  <!-- don't want chrome's message saying 'do you want this page translated' -->
 	    <meta http-equiv='Content-Language' content='en_US' /> 
+	</head>
+
+	<body>
 		<script type='text/javascript'>
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-33201912-1']);
-		  _gaq.push(['_setDomainName', 'languageinplace.com']);
 		  _gaq.push(['_setAllowLinker', true]);
 		  _gaq.push(['_trackPageview']);
 
@@ -33,9 +35,6 @@ Transitional//EN\">
 		  })();
 
 		</script>
-	</head>
-
-	<body>
 
 <script type='text/javascript'>
   var uvOptions = {};
@@ -44,9 +43,7 @@ Transitional//EN\">
     uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/x2Lggvetla8c7O2nniKk8w.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
   })();
-</script>
-
-	</body>
+</script>	
 
     <div class='center_column'>
 

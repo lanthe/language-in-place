@@ -1,0 +1,16 @@
+* no hover UI -- needs to work well on an iPad
+
+* translate each word
+* translate whole sentence
+* subtle google ads / amazon affiliate links
+* vocab box with words you've had to click on -- should this follow you down the page, or should words annotate the side of the page?
+
+"make my own textbook"
+1.  upload text you want
+2.  click on words that you want used for scaffolding 
+    * could maybe build a smarty-type tool so teachers can quickly find dictionary definitions of words (with parts of speech and gender, etc)
+3.  decide whether other words should be clickable
+4.  download list of vocab words so you can assign quizzes etc
+5.  allow the teacher to read each sentence out loud so the kid can listen while they learn (extra money cause of hosting costs)
+
+-- could make a way to make the textbooks distributable in the iBooks textbook store thing
