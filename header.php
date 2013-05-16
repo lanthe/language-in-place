@@ -16,9 +16,7 @@ Transitional//EN\">
 	    <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.2.js'></script>
 	    <meta name='google' value='notranslate'>  <!-- don't want chrome's message saying 'do you want this page translated' -->
 	    <meta http-equiv='Content-Language' content='en_US' /> 
-	</head>
 
-	<body>
 		<script type='text/javascript'>
 
 		  var _gaq = _gaq || [];
@@ -35,6 +33,10 @@ Transitional//EN\">
 		  })();
 
 		</script>
+	</head>
+
+	<body>
+
 
 <script type='text/javascript'>
   var uvOptions = {};
