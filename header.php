@@ -50,10 +50,7 @@ Transitional//EN\">
 
     <div class='header'>
 	      <a href='/'><img class='header_logo' src='imgs/lip-logo.png'></img></a>
-		  <div id='change_language' class='header_link'>
-		    <img src='' class='flag flag-us'/> &nbsp;to&nbsp; 
-		    <img src='' class='flag flag-fr'/>
-		  </div>	
+		  <div id='change_language' class='header_link'>Change Language</div>
 		  <div class='header_link'><a class='header_link' href='for_teachers.php'>For Teachers</a></div>
     </div>
 ";

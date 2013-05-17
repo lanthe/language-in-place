@@ -20,10 +20,11 @@ echo text_view();
 </div>
 <div class='overlay'>
 	<div "overlay_item">
-		To learn other languages, try out our partner sites:<br>
+		To learn other languages, try out our other sites:<br>
 		<a href="http://spanishinplace.com">Spanish in Place</a><br>
 		<a href="http://italianinplace.com">Italian in Place</a><br>
-		<a href="http://frenchinplace.com">French in Place</a><br>		
+		<a href="http://frenchinplace.com">French in Place</a><br>
+        <a href="http://hindiinplace.com">Hindi in Place</a><br>
 	</div>
 	<hr>
 	<div "overlay_item">

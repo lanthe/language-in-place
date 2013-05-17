@@ -202,7 +202,6 @@ img.header_logo {
 a.footer_link,
 a.header_link {
 	text-decoration: none;
-	font-size: 14px;
 }
 
 div.header_link {
@@ -240,7 +239,10 @@ div.footer {
   text-align: center;
 }
 
-
+/* for bbc hindi news source */
+span.label {
+  display:none;
+}
 
 /* not-implemented.php */
 
@@ -249,3 +251,5 @@ div.not_implemented_message {
 	margin-top:10px;
 	width:920px;
 }
+
+
